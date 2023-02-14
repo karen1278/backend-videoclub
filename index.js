@@ -21,6 +21,20 @@ mongoose.connect("mongodb+srv://yochi22:Marcador22@cluster0.jzbl6wm.mongodb.net/
   .then(() => console.log("conxion bien, que crack eres karen"))
   .catch((err) => console.error(err));
 
+
+
+//Responseheaders CORS (Cross-Origin Resource Sharing)thisconfig allows resources to be requested from a different domain
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE") // Allow-Methods header to "GET, POST, PUT, DELETE"
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header("Access-Control-Allow-Credentials", "true");
+  next();
+});
+
 app.use("/movies", todoRoutes);
 
 app.listen(PORT, () => {
