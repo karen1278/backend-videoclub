@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.set('strictQuery', true)
-mongoose.connect("mongodb+srv://yochi22:Marcador22@cluster0.jzbl6wm.mongodb.net/videoclub")
+mongoose.connect("mongodb+srv://yochi22:Marcador22@cluster0.jzbl6wm.mongodb.net/videoclub", connectionOptions)
   .then(() => console.log("conxion bien, que crack eres karen"))
   .catch((err) => console.error(err));
 
