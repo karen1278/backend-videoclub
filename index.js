@@ -10,8 +10,7 @@ const todoRoutes = require("./routes/todoRoutes");
 const connectionOptions =
 {
   useUnifiedTopology: true,
-  useNewUrlParser: true,
-  useFindAndModify: false
+  useNewUrlParser: true
 };
 
 app.use(cors());
