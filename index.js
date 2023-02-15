@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require('cors');
 
 const app = express();
-const PORT = 3030
+const PORT = 3030;
 
 const todoRoutes = require("./routes/todoRoutes");
 
@@ -13,10 +13,10 @@ const connectionOptions =
   useNewUrlParser: true
 };
 
-app.use(cors());
+app.use(cors()); // Agrega el middleware CORS
 app.use(express.json());
 
-mongoose.set('strictQuery', true)
+mongoose.set('strictQuery', true);
 mongoose.connect("mongodb+srv://yochi22:Marcador22@cluster0.jzbl6wm.mongodb.net/videoclub", connectionOptions)
   .then(() => console.log("conxion bien, que crack eres karen"))
   .catch((err) => console.error(err));
@@ -24,5 +24,5 @@ mongoose.connect("mongodb+srv://yochi22:Marcador22@cluster0.jzbl6wm.mongodb.net/
 app.use("/movies", todoRoutes);
 
 app.listen(PORT, () => {
-  console.log("mi puerto funciona y es" + PORT)
+  console.log("mi puerto funciona y es " + PORT);
 });
