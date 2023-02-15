@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require("mongoose");
+const cors = require('cors');
 
 const app = express();
 const PORT = 3030
@@ -13,6 +14,7 @@ const connectionOptions =
   useFindAndModify: false
 };
 
+app.use(cors());
 app.use(express.json());
 
 mongoose.set('strictQuery', true)

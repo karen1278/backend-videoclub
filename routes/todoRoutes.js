@@ -2,6 +2,7 @@ const router = require("express").Router();
 const Movie = require("../models/Movie");
 const moment = require('moment');
 
+
 router.get("/", (req, res) => {
   Movie.find((err, result) => {
     if (err) throw new Error(err);
