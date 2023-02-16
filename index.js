@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require("mongoose");
 const cors = require('cors');
 
-
 const app = express();
 const PORT = 3030;
 
@@ -14,11 +13,10 @@ const connectionOptions =
   useNewUrlParser: true
 };
 
-
 app.use(express.json());
 
 app.use(cors({
-  origin: 'http://localhost:5173' // Reemplaza esto con el origen de tu frontend
+  origin: '*'
 }));
 
 mongoose.set('strictQuery', true);
@@ -27,8 +25,6 @@ mongoose.connect("mongodb+srv://yochi22:Marcador22@cluster0.jzbl6wm.mongodb.net/
   .catch((err) => console.error(err));
 
 app.use("/movies", todoRoutes);
-
-
 
 app.listen(PORT, () => {
   console.log("mi puerto funciona y es " + PORT);
