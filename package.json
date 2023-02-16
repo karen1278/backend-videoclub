@@ -6,7 +6,7 @@
     "dev": "nodemon index.js",
     "start": "node index.js",
     "lint": "eslint",
-    "build": "echo 'Build complete.'"
+    "build": "npm run vercel-build"
   },
   "keywords": [],
   "author": "",
