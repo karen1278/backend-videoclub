@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build": "echo 'Build complete.'"
   },
   "keywords": [],
   "author": "",
