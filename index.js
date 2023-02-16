@@ -17,7 +17,9 @@ const connectionOptions =
 
 app.use(express.json());
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173' // Reemplaza esto con el origen de tu frontend
+}));
 
 mongoose.set('strictQuery', true);
 mongoose.connect("mongodb+srv://yochi22:Marcador22@cluster0.jzbl6wm.mongodb.net/videoclub", connectionOptions)
