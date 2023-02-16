@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "lint": "eslint",
-    "build": "npm run vercel-build"
+    "lint": "eslint"
   },
   "keywords": [],
   "author": "",
